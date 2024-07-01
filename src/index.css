@@ -165,5 +165,8 @@ body {
 }
 
 .social-icon:hover {
-  background-color: #FFFFFF; /* White */
+  background-color: #ffffffb4; /* White */
+}
+.social-icon svg path {
+  fill: white;
 }

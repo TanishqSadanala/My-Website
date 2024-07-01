@@ -1,6 +1,4 @@
 declare module '@sanity/client' {
-    import { SanityClient } from '@sanity/client';
-    const sanityClient: SanityClient;
-    export default sanityClient;
-  }
-  
+  const sanityClient: (config: any) => any;
+  export default sanityClient;
+}

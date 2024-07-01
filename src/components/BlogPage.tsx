@@ -1,27 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './BlogPage.css';
-import sanityClient from '@sanity/client';
 
 interface Blog {
-  _id: string;
+  id: string;
   title: string;
-  body: any[];
-  mainImage: {
-    asset: {
-      url: string;
-    };
-  };
+  content: string;
 }
 
 const BlogPage: React.FC = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [selectedBlog, setSelectedBlog] = useState<Blog | null>(null);
+  const [blogs] = useState<Blog[]>([
+    {
+      id: 'blog1',
+      title: 'Exploring the Best Coffee Shops in Town',
+      content: 'Discover the top spots for your daily caffeine fix with our curated list of the best coffee shops in the city. Whether you\'re looking for a quiet place to work, a cozy spot to catch up with friends, or the perfect cup of coffee, we\'ve got you covered. Each coffee shop on our list has been carefully selected for its unique atmosphere, exceptional coffee, and friendly staff. From hidden gems to popular favorites, these coffee shops offer something for everyone. Start your coffee adventure today and explore the best coffee shops in town!',
+    },
+    {
+      id: 'blog2',
+      title: 'A Guide to the Most Beautiful Beaches Around the World',
+      content: 'From the Caribbean to the Mediterranean, explore the most stunning beaches that should be on your travel bucket list. These beaches offer pristine sands, crystal-clear waters, and breathtaking views. Whether you\'re looking for a relaxing getaway or an adventurous vacation, these beaches have something for everyone.',
+    },
+    {
+      id: 'blog3',
+      title: 'Top 10 Must-Read Books for This Year',
+      content: 'Dive into our selection of the best books to read this year, spanning across various genres and topics. From thrilling mysteries to heartwarming romances, these books are sure to captivate and inspire. Whether you\'re looking for a new favorite author or a classic novel, our list has something for everyone.',
+    },
+  ]);
 
-  useEffect(() => {
-    sanityClient.fetch<Blog[]>('*[_type == "blogPost"]').then((data: React.SetStateAction<Blog[]>) => setBlogs(data));}, []);
+  const [selectedBlog, setSelectedBlog] = useState<string | null>(null);
 
-  const handleCardClick = (blog: Blog) => {
-    setSelectedBlog(blog);
+  const handleCardClick = (blogId: string) => {
+    setSelectedBlog(blogId);
   };
 
   return (
@@ -30,14 +38,14 @@ const BlogPage: React.FC = () => {
         <h2>Blog Posts</h2>
         {blogs.map((blog) => (
           <div
-            key={blog._id}
-            className={`card ${selectedBlog?._id === blog._id ? 'selected' : ''}`}
-            onClick={() => handleCardClick(blog)}
+            key={blog.id}
+            className={`card ${selectedBlog === blog.id ? 'selected' : ''}`}
+            onClick={() => handleCardClick(blog.id)}
           >
-            <img src={blog.mainImage.asset.url} alt={blog.title} className="card-image" />
+            <img src="https://placehold.co/400" alt={blog.title} className="card-image" />
             <div className="card-content">
               <h2 className="card-title">{blog.title}</h2>
-              <p className="card-description">{blog.body[0]?.children[0]?.text.substring(0, 100)}...</p>
+              <p className="card-description">{blog.content.substring(0, 100)}...</p>
             </div>
           </div>
         ))}
@@ -46,10 +54,8 @@ const BlogPage: React.FC = () => {
         {!selectedBlog && <h1>Select a blog post to read</h1>}
         {selectedBlog && (
           <div className="blog-page">
-            <h1 className="blog-title">{selectedBlog.title}</h1>
-            <div className="blog-content">
-              {selectedBlog.body.map((block) => block.children.map((child: { text: any; }) => child.text).join(' ')).join('\n')}
-            </div>
+            <h1 className="blog-title">{blogs.find(blog => blog.id === selectedBlog)?.title}</h1>
+            <p className="blog-content">{blogs.find(blog => blog.id === selectedBlog)?.content}</p>
           </div>
         )}
       </div>
