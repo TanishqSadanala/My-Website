@@ -1,0 +1,84 @@
+.blog-page-content {
+  display: flex;
+  height: 100vh;
+  background-color: #121212; /* Match the dark background */
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #1e1e1e; /* Dark sidebar background */
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: #1e1e1e; /* Dark card background */
+  border: 1px solid #333; /* Dark border */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.card.selected {
+  border: 2px solid #007bff; /* Highlight the selected card */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Add a blue shadow to the selected card */
+}
+
+.card-image {
+  width: 100%;
+  height: 150px; /* Set a fixed height for the card image */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 8px 8px 0 0;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.blog-page {
+  padding: 2rem;
+  background-color: #1e1e1e; /* Match the dark background */
+  color: #ffffff; /* White text for readability */
+}
+
+.blog-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.blog-content {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #bbbbbb; /* Light gray text for readability */
+}

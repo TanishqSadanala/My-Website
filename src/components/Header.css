@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1E1E1E;
+  background-color: #1E1E1E;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 24px; /* Adjust the size of the logo if needed */
+  height: 24px;
+}
+
+.header-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  color: #E0E0E0;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+}
+
+.profile-pic {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
