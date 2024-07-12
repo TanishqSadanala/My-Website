@@ -11,8 +11,8 @@ const BlogPage: React.FC = () => {
   const [blogs] = useState<Blog[]>([
     {
       id: 'blog1',
-      title: 'Exploring the Best Coffee Shops in Town',
-      content: 'Discover the top spots for your daily caffeine fix with our curated list of the best coffee shops in the city. Whether you\'re looking for a quiet place to work, a cozy spot to catch up with friends, or the perfect cup of coffee, we\'ve got you covered. Each coffee shop on our list has been carefully selected for its unique atmosphere, exceptional coffee, and friendly staff. From hidden gems to popular favorites, these coffee shops offer something for everyone. Start your coffee adventure today and explore the best coffee shops in town!',
+      title: 'What Did 50 LeetCode Questions taught me? + Amazon Rejection',
+      content: 'I started with leetcode a good 50 days back, and attempted my first interview at amazon.\n It is an entry level job in SysDev position.I have failed miserably and here is how it went.\n ',
     },
     {
       id: 'blog2',
