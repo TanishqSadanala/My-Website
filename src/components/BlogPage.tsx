@@ -21,13 +21,13 @@ const BlogPage: React.FC = () => {
       id: 'blog2',
       title: 'A Guide to the Most Beautiful Beaches Around the World',
       content: 'From the Caribbean to the Mediterranean, explore the most stunning beaches that should be on your travel bucket list. These beaches offer pristine sands, crystal-clear waters, and breathtaking views. Whether you\'re looking for a relaxing getaway or an adventurous vacation, these beaches have something for everyone.',
-      markdownFile: 'my-vite-project/test.md',
+      markdownFile: 'my-vite-project/src/test.md',
     },
     {
       id: 'blog3',
       title: 'Top 10 Must-Read Books for This Year',
       content: 'Dive into our selection of the best books to read this year, spanning across various genres and topics. From thrilling mysteries to heartwarming romances, these books are sure to captivate and inspire. Whether you\'re looking for a new favorite author or a classic novel, our list has something for everyone.',
-      markdownFile: 'my-vite-project/test.md',
+      markdownFile: 'my-vite-project/src/test.md',
     },
   ]);
 
