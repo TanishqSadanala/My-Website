@@ -15,7 +15,7 @@ const BlogPage: React.FC = () => {
       id: 'blog1',
       title: 'What Did 50 LeetCode Questions taught me? + Amazon Rejection',
       content: 'I started with leetcode a good 50 days back, and attempted my first interview at amazon.\n It is an entry level job in SysDev position.I have failed miserably and here is how it went.\n ',
-      markdownFile: 'My-Website/test.md',
+      markdownFile: 'my-vite-project/src/test.md',
     },
     {
       id: 'blog2',
