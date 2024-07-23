@@ -15,7 +15,7 @@ const BlogPage: React.FC = () => {
       id: 'blog1',
       title: 'My first Blog',
       content: 'hello guys ',
-      markdownFile: 'src/components/test.md',
+      markdownFile: '/test.md',
     },
     {
       id: 'blog2',
