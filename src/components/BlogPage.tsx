@@ -13,8 +13,8 @@ const BlogPage: React.FC = () => {
   const [blogs] = useState<Blog[]>([
     {
       id: 'blog1',
-      title: 'What Did 50 LeetCode Questions taught me? + Amazon Rejection',
-      content: 'I started with leetcode a good 50 days back, and attempted my first interview at amazon.\n It is an entry level job in SysDev position.I have failed miserably and here is how it went.\n ',
+      title: 'My first Blog',
+      content: 'hello guys ',
       markdownFile: 'src/components/test.md',
     },
     {
