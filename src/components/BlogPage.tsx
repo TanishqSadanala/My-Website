@@ -33,6 +33,21 @@ const BlogPage: React.FC = () => {
 
   const [selectedBlog, setSelectedBlog] = useState<string | null>(null);
   const [markdownContent, setMarkdownContent] = useState<string>('');
+  const [gradients, setGradients] = useState<string[]>([]);
+
+  useEffect(() => {
+    const generateRandomGradient = () => {
+      const colors = [
+        '#ff7e5f', '#feb47b', '#6a11cb', '#2575fc', '#43cea2', '#185a9d', '#f85032', '#e73827', '#ff416c', '#ff4b2b'
+      ];
+      const startColor = colors[Math.floor(Math.random() * colors.length)];
+      const endColor = colors[Math.floor(Math.random() * colors.length)];
+      return `linear-gradient(135deg, ${startColor} 0%, ${endColor} 100%)`;
+    };
+
+    const newGradients = blogs.map(() => generateRandomGradient());
+    setGradients(newGradients);
+  }, [blogs]);
 
   useEffect(() => {
     if (selectedBlog) {
@@ -62,13 +77,18 @@ const BlogPage: React.FC = () => {
     <div className="blog-page-content">
       <div className="sidebar">
         <h2>Blog Posts</h2>
-        {blogs.map((blog) => (
+        {blogs.map((blog, index) => (
           <div
             key={blog.id}
             className={`card ${selectedBlog === blog.id ? 'selected' : ''}`}
             onClick={() => handleCardClick(blog.id)}
           >
-            <img src="https://placehold.co/400" alt={blog.title} className="card-image" />
+            <div
+              className="card-gradient"
+              style={{ background: gradients[index] }}
+            >
+              <img src="https://placehold.co/400" alt={blog.title} className="card-image" />
+            </div>
             <div className="card-content">
               <h2 className="card-title">{blog.title}</h2>
               <p className="card-description">{blog.content.substring(0, 100)}...</p>
