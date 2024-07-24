@@ -1,267 +1,39 @@
-# Test
+# My First Interview Experience in FAANG
 
-This is a **test** markdown file.
+I have only 10 months of experience, so I am a fresher. I got an interview at Amazon last month, and this is how it went.
 
-<iframe src="https://codesandbox.io/embed/new?codemirror=1" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+## Interview Question
 
-# Markdown Guide
+I was asked a question like this:
 
-![The Ultimate Guide to Markdown](http://blog.ghost.org/content/images/2015/03/markdown-guide-1.jpg)
+> Given a string of numbers "56, 65, 46, 38, 99, 88", sort the numbers in the string according to the sum of the digits of each 2-digit number in the given string of numbers.
 
-## Basic Markdown Formatting
+Now, this is a pretty simple question. And I was not able to give a correct answer to this. I overshot it and used hashmaps to store the sum of each 2-digit number and failed at the end. (I tried to reverse index a hashmap 😒 I did not know that it was not possible.)
 
-### Headings
+At this point in the interview, I had solved like 50 LeetCode problems, mostly on arrays, sliding windows, 2 pointers, and stack, and only medium and easy questions. However, LeetCode did not help me in the interview at all.
 
-    # This is an <h1> tag
-    ## This is an <h2> tag
-    ### This is an <h3> tag
-    #### This is an <h4> tag
-    ##### This is an <h5> tag
-    ###### This is an <h6> tag
-    
-### Emphasis
+## Next Questions
 
-    *This text will be italic*
-    _This will also be italic_
-    
-    **This text will be bold**
-    __This will also be bold__
-    
-    _You **can** combine them_
-    
-Result:
+The next basic question was:
 
-*This text will be italic*
+> How exactly does the internet work?
 
-_This will also be italic_
+I gave my answer on DNS, CDNs, blah blah...
 
-**This text will be bold**
+The next one was:
 
-__This will also be bold__
+> How exactly does server troubleshooting happen? What are the different types of troubleshooting on the server side? What are the different problems occurring on the server?
 
-_You **can** combine them_
+I failed again.
 
-### Lists
+## Last Question
 
-**Inordered:**
+The last question was:
 
-    * Milk
-    * Bread
-        * Wholegrain
-    * Butter
+> Explain a project from your master's days.
 
-Result:
+I thought I did well because Deep Learning is my interest, and I answered the question pretty decently. He asked a question, and I gave him the answer, but I think he got pissed off because I corrected him in some way.
 
-* Milk
-* Bread
-    * Wholegrain
-* Butter
+## Conclusion
 
-**Ordered:**
-
-    1. Tidy the kitchen  
-    2. Prepare ingredients  
-    3. Cook delicious things
-
-Result:
-
-1. Tidy the kitchen  
-2. Prepare ingredients  
-3. Cook delicious things
-
-### Images
-
-    ![Alt Text](url)
-
-Result:
-
-![m'lady](http://i.imgur.com/v8IVDka.jpg)
-
-### Links
-
-    [link](http://example.com)
-    
-Result:
-
-[link](http://example.com)
-
-### Blockquotes
-
-    As Kanye West said:
-
-    > We're living the future so
-    > the present is our past.
-
-Result:
-
-As Kanye West said:
-> We're living the future so
-> the present is our past.
-
-### Horizontal Rules
-
-    ---
-
-Result:
-
----
-
-### Code Snippets
-
-    Indenting by 4 spaces will turn an entire paragraph into a code-block.
-
-Result:
-
-    .my-link {
-        text-decoration: underline;
-    }
-
-### Reference Lists & Titles
-
-    **The quick brown [fox][1], jumped over the lazy [dog][2].**
-
-    [1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
-    [2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
-
-Result:
-
-**The quick brown [fox][1], jumped over the lazy [dog][2].**
-
-[1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
-[2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
-
-### Escaping
-
-    \*literally\*
-
-Result:
-
-\*literally\*
-
-### Embedding HTML
-
-    <button class="button-save large">Big Fat Button</button>
-
-Result:
-
-<button class="button-save large">Big Fat Button</button>
-
-## Advanced Markdown
-
-Note: Some syntax which is not standard to native Markdown. They're extensions of the language.
-
-### Strike-throughs
-
-    ~~deleted words~~
-
-Result:
-
-~~deleted words~~
-
-### Highlights
-
-Work in [Ghost](https://ghost.org/):
-
-    ==oooh fancy==
-
-Result:
-
-==oooh fancy==
-
-### Automatic Links
-
-    https://ghost.org
-
-Result:
-
-https://ghost.org
-
-### Markdown Footnotes
-
-Work in [Ghost](https://ghost.org/):
-
-    The quick brown fox[^1] jumped over the lazy dog[^2].
-
-    [^1]: Foxes are red
-    [^2]: Dogs are usually not red
-
-Result:
-
-The quick brown fox[^1] jumped over the lazy dog[^2].
-
-[^1]: Foxes are red
-[^2]: Dogs are usually not red
-
-## GitHub Flavored Markdown
-
-### Syntax Highlighting
-
-    ```javascript
-    function fancyAlert(arg) {
-      if(arg) {
-        $.facebox({div:'#foo'})
-      }
-    }
-    ```
-
-Result:
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-
-### Task Lists
-
-    - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-    - [x] list syntax required (any unordered or ordered list supported)
-    - [x] this is a complete item
-    - [ ] this is an incomplete item
-
-Result:
-
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-### Tables
-
-You can create tables by assembling a list of words and dividing them with hyphens `-` (for the first row), and then separating each column with a pipe `|`:
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-### SHA references
-
-Any reference to a commit’s SHA-1 hash will be automatically converted into a link to that commit on GitHub.
-
-    16c999e8c71134401a78d4d46435517b2271d6ac
-    mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
-    mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
-
-### Issue references within a repository
-
-Any number that refers to an Issue or Pull Request will be automatically converted into a link.
-
-    #1
-    mojombo#1
-    mojombo/github-flavored-markdown#1
-    
-### Username @mentions
-
-Typing an `@` symbol, followed by a username, will notify that person to come and view the comment. This is called an “@mention”, because you’re mentioning the individual. You can also @mention teams within an organization.
-
-### Emoji
-
-GitHub supports emoji! Check out the [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/).
-
-## References
-
-* http://blog.ghost.org/markdown/
-* https://guides.github.com/features/mastering-markdown/
+So this was my journey's head start. No jobs till now, no interviews till now. I stopped applying because my skills are not up to the mark, so let's learn and apply simultaneously. I have to think more positively.
